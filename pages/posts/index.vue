@@ -1,14 +1,16 @@
 <template>
     <div>
         <h1>Post</h1>
-        <ul>
-            <li v-for="(post,i) of posts" :key="i">{{post.title}}</li>
-        </ul>
+        <Post v-for="post of posts" :key="post.id" :id="post.id" :title="post.title"/>
     </div>
 </template> 
 <script>
 import axios from 'axios'
+import Post from '../../components/Post'
 export default {
+    components:{
+        Post
+    },
     data(){
         return {
             posts:[]
