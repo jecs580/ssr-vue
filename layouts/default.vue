@@ -1,9 +1,17 @@
 <template>
+<div>
+  <Navigation/>
   <div class="content">
     <Nuxt />
   </div>
+</div>
 </template>
-
+<script>
+import Navigation from '../components/Navigation'
+export default {
+  
+}
+</script>
 <style>
   *{
     box-sizing: border-box;
